@@ -1,0 +1,6 @@
+title: "Cursor loading example"
+repo: "DimensionLab/cursor-loading-example"
+description: "Example of cursor loading in webVR with A-Frame."
+mobile: true
+components:
+assets:

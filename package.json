@@ -1,0 +1,27 @@
+{
+  "name": "aframe-cursor-loading-example",
+  "description": "Example of cursor loading in webVR with A-Frame.",
+  "version": "0.1.0",
+  "license": "MIT",
+  "author": "Michal Takac",
+  "scripts": {
+    "start": "budo --live --verbose --port 3000 --open",
+    "deploy": "ghpages",
+    "ghpages": "ghpages"
+  },
+  "devDependencies": {
+    "budo": "^7.0.0",
+    "ghpages": "0.0.3"
+  },
+  "keywords": [
+    "dimensionlab",
+    "cursor",
+    "loading",
+    "aframe",
+    "aframe-example",
+    "aframe-boilerplate",
+    "aframe-scene",
+    "webvr",
+    "vr"
+  ]
+}
