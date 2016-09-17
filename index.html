@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Cursor loading example - DimensionLab</title>
+    <meta name="description" content="Cursor loading example - DimensionLab">
+    <script src="https://aframe.io/releases/0.3.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+
+      <!-- CURSOR ENTITY -->
+      <a-entity position="0 1.8 5">
+        <a-entity
+            id="camera"
+            camera
+            look-controls
+            rotation="0 0 0"
+            wasd-controls>
+
+            <!-- MAIN CURSOR -->
+            <a-entity
+                cursor="fuse: true; maxDistance: 500; timeout: 3000;"
+                id="cursor-main"
+                position="0 0 -2"
+                geometry="primitive: ring; radiusOuter: 0.06; radiusInner: 0.03; thetaLength: 360; thetaStart: 90;"
+                material="color: #439DC2;"
+                >
+                <a-animation begin="cursor-fusing" attribute="geometry.thetaLength" fill="forwards" from="360" to="0" easing="ease-in"></a-animation>
+                <a-animation begin="mouseleave" attribute="geometry.thetaLength" fill="backwards" from="0" to="360" dur="0"></a-animation>
+            </a-entity>
+            <a-entity
+                id="cursor-loader"
+                position="0 0 -2.0001"
+                geometry="primitive: ring; radiusOuter: 0.06; radiusInner: 0.03;"
+                material="color: #2ADD2A;"
+                >
+            </a-entity>
+        </a-entity>
+      </a-entity>
+
+      <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
+      <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
+      <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
+      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+      <a-sky color="#ECECEC"></a-sky>
+    </a-scene>
+  </body>
+</html>
